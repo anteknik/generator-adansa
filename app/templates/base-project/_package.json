@@ -1,0 +1,12 @@
+{
+  "name": "<%= properties.projectName %>",
+  "homepage": "<%= properties.projectWebsite %>",
+  "author": {
+    "name": "<%= properties.projectAuthor %>",
+    "email": "<%= properties.projectEmail %>"
+  },
+  "version": "0.0.0",
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}

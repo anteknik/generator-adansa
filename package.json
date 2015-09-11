@@ -1,0 +1,32 @@
+{
+  "name": "generator-adansa",
+  "version": "0.0.1",
+  "description": "Spring Boot Authorization Server yo Generator",
+  "homepage": "https://github.com/anteknik/generator-adansa",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anteknik/generator-adansa"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "java",
+    "spring-boot",
+    "oauth",
+    "yeoman-generator"
+  ],
+  "author": "Anton Purwanto <anton.takaful@gmail.com> (https://github.com/anteknik/generator-adansa)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "yeoman-generator": "^0.20.3"
+  },
+  "bugs": {
+    "url": "https://github.com/anteknik/generator-adansa/issues"
+  }
+}
