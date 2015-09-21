@@ -15,7 +15,7 @@
 
 ### REST Resource Server ###
 
-1. Masuk ke folder resource-server
+1. Go to the folder rest resource-server
 
     ```
     cd rest
