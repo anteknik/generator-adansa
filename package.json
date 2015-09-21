@@ -1,6 +1,6 @@
 {
   "name": "generator-adansa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Spring Boot Authorization Server yo Generator",
   "homepage": "https://github.com/anteknik/generator-adansa",
   "main": "app/index.js",

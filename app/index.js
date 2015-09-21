@@ -66,21 +66,27 @@ module.exports = yeoman.generators.Base.extend({
       var underscoreParams        = { evaluate: /\<\%([\s\S]+?)\%\>/g, interpolate: /\<\%\=([\s\S]+?)\%\>/g, escape: /\<-([\s\S]+?)\>/g };
       var baseProjectPath         = 'base-project/';
       //var genericTemplateFiles    = ['_package.json' , '_pom.xml']
-      var genericCopyFiles        = ['_pom.xml'];
+      var genericCopyFiles        = ['_pom.xml','_rest/pom.xml'];
       var packagePath             = this.properties.packageName.replace(/\./g, '/');
       var javaSrcPath             = baseProjectPath + 'src/main/java/'
       var javaSrcTestPath         = baseProjectPath + 'src/test/java/'
+	  var javaRestPath            = baseProjectPath + 'rest/src/main/java/'
+	  var javaRestTestPath        = baseProjectPath + 'rest/src/test/java/'
       var javaPath                = 'src/main/java/' + packagePath + '/';
       var javaTestPath            = 'src/test/java/' + packagePath + '/';
-
+	  var restPath                = '_rest/src/main/java/' + packagePath + '/';
+	  var restTestPath            = '_rest/src/main/java/' + packagePath + '/';
+		
       //for (var f in genericTemplateFiles)
         //this.template(baseProjectPath + genericTemplateFiles[f], genericTemplateFiles[f].substr(1,500), this, underscoreParams);
       for (var t in genericCopyFiles)
-        this.copy(baseProjectPath + genericCopyFiles[t], genericCopyFiles[t].substr(1,500), this, underscoreParams);      
-      
-	  this.directory(baseProjectPath + 'src/main/resources/', 'src/main/resources/');     
+      this.copy(baseProjectPath + genericCopyFiles[t], genericCopyFiles[t].substr(1,500), this, underscoreParams);      
+	  this.directory(baseProjectPath + 'src/main/resources/', 'src/main/resources/');
+	  this.directory(baseProjectPath + '_rest/src/main/resources/', 'rest/src/main/resources/');
       this.directory(baseProjectPath + 'src/main/java/package/', 'src/main/java/' + packagePath + '/');
+	  this.directory(baseProjectPath + '_rest/src/main/java/package/', 'rest/src/main/java/' + packagePath + '/');
       this.directory(baseProjectPath + 'src/test/java/package/', 'src/test/java/' + packagePath + '/');
+	  this.directory(baseProjectPath + '_rest/src/test/java/package/', 'rest/src/test/java/' + packagePath + '/');
     },
     projectfiles: function () { }
   }  
